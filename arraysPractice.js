@@ -32,7 +32,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
   //Code Here
   function looper(family) {
-    for (var i = 0; i < alert(family.length; i++) {);
+    for (var i = 0; i < family.length; i++) { ;
       alert(family[i]);
     };
   }
@@ -64,6 +64,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
     for (var i = 0; i < nums.length; i++) {
       if (nums [i] % 2 != 0) nums.splice(i,1)
     };
+  return nums;
   }
 
 
@@ -147,12 +148,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
-  function removeItem(myGroceryList, item) {
-    return myGroceryList.indexOf(item) > -1 ? myGroceryList.splice(myGroceryList.indexOf(item),1) : myGroceryList;
+    function removeItem(myGroceryList, item) {
+      if (!myGroceryList || !item) { 
+        return [];
+      }
+      else {
+     myGroceryList.indexOf(item) > -1 ? myGroceryList.splice(myGroceryList.indexOf(item),1) : null;
+     return myGroceryList;
+   }
   }
 
   function addItem(myGroceryList, item) {
-    return myGroceryList.push(item);
+    if (!myGroceryList || !item) { 
+        return [];
+      }
+      else {
+        myGroceryList.push(item);
+    return myGroceryList;
+  }
   }
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
@@ -169,7 +182,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   //Code Here
   function maker() {
     var arr = [];
-    for (var i = 1; i <= 25; i++) {
+    for (var i = 1; i <= 215; i++) {
       arr.push(i);
     };
     return arr;
@@ -274,13 +287,14 @@ sure that it's equal to 4. */
 
   //Code Here
   devMountainEmployees = [tyler,cahlan,ryan,colt];
+  console.log(devMountainEmployees.length)
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
   for (var i=0;i<devMountainEmployees.length;i++) {
-    if (devMountainEmployees[i].name == 'Cahlan') delete devMountainEmployees[i]
+    if (devMountainEmployees[i].name == 'Cahlan')  devMountainEmployees.splice([i],1)
   }
 
 
