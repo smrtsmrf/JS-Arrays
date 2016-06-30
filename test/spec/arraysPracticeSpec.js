@@ -1,4 +1,4 @@
-describe('arraysPractice.js', function () {
+describe('arraysPractice', function () {
 	describe('first', function () {
 		it('should exist', function () {
 			expect(first).toBeDefined();
